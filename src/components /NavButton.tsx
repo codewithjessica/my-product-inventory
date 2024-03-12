@@ -1,20 +1,20 @@
 import Button from "@mui/material/Button";
 
 interface NavButtonProps {
-    name: string;
-    link: string;
+  name: string;
+  link: string;
 }
 
 const NavButton = ({ name, link }: NavButtonProps) => {
   return (
-    <Button 
-    href={link}
-    key={name}
-    sx={{ my:2, color: "white", display: "block"}}
+    <Button
+      href={link}
+      key={name}
+      sx={{ my: 2, color: "white", display: "block" }}
     >
-        {name}
+      {name}
     </Button>
-  )
-}
+  );
+};
 
-export default NavButton
+export default NavButton;
