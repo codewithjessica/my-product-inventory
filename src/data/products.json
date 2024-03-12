@@ -1,0 +1,88 @@
+{
+    "products": {
+      "data": {
+        "items": [{
+            "products": [
+              {
+                "id": 1,
+                "name": "Green Tea",
+                "description": "Green tea is made from Camellia sinensis leaves and buds that have not undergone the same withering and oxidation process used to make oolong teas and black teas. It originated in China but has become associated with many cultures throughout Asia. Green tea has a fresh, grassy flavor and is often praised for its health benefits due to its high concentration of antioxidants.",
+                "price": 5.99,
+                "rating": 4.5
+              },
+              {
+                "id": 2,
+                "name": "Black Tea",
+                "description": "Black tea is a type of tea that is more oxidized than oolong, green, and white teas. It is generally stronger in flavor than other teas and contains more caffeine. Black tea is made from the leaves of the Camellia sinensis plant, and the level of oxidation gives it its characteristic dark color and bold flavor.",
+                "price": 4.99,
+                "rating": 4.2
+              },
+              {
+                "id": 3,
+                "name": "White Tea",
+                "description": "White tea is made from the young leaves and buds of the Camellia sinensis plant. It undergoes minimal processing, with leaves being simply harvested and dried. White tea has a delicate flavor and is characterized by subtle floral and sweet notes. It is prized for its high levels of antioxidants and low caffeine content.",
+                "price": 6.49,
+                "rating": 4.6
+              },
+              {
+                "id": 4,
+                "name": "Oolong Tea",
+                "description": "Oolong tea is a traditional Chinese tea that falls somewhere between green and black tea in terms of oxidation. It is partially oxidized, giving it a unique flavor profile that can range from floral and fruity to woody and toasty. Oolong tea is known for its complexity and is often enjoyed for its rich taste.",
+                "price": 7.99,
+                "rating": 4.4
+              },
+              {
+                "id": 5,
+                "name": "Herbal Tea",
+                "description": "Herbal tea, also known as tisane, refers to any beverage made from the infusion or decoction of herbs, spices, or other plant material in hot water. Unlike true teas (such as green, black, white, and oolong tea), which are made from the leaves of the Camellia sinensis plant, herbal teas are caffeine-free and can offer a wide range of flavors and health benefits.",
+                "price": 3.99,
+                "rating": 4.0
+              },
+              {
+                "id": 6,
+                "name": "Pu-erh Tea",
+                "description": "Pu-erh tea is a fermented tea produced in the Yunnan province of China. It undergoes a unique aging process that can last for several years, resulting in a distinct earthy flavor and aroma. Pu-erh tea is often compressed into various shapes, such as cakes or bricks, and is prized for its supposed health benefits, including aiding digestion and weight loss.",
+                "price": 8.99,
+                "rating": 4.3
+              },
+              {
+                "id": 7,
+                "name": "Matcha Tea",
+                "description": "Matcha is a type of green tea that has been finely ground into a powder. It originated in Japan and is commonly used in traditional Japanese tea ceremonies. Matcha tea has a vibrant green color and a rich, umami flavor. It is made by whisking the powdered tea with hot water, resulting in a frothy beverage that is enjoyed for its taste and potential health benefits.",
+                "price": 9.99,
+                "rating": 4.8
+              },
+              {
+                "id": 8,
+                "name": "Rooibos Tea",
+                "description": "Rooibos tea, also known as red tea or bush tea, is a caffeine-free herbal tea made from the leaves of the Aspalathus linearis plant, which is native to South Africa. It has a sweet, nutty flavor and is often enjoyed plain or with milk and sugar. Rooibos tea is rich in antioxidants and is believed to have various health benefits, including supporting heart health and improving skin conditions.",
+                "price": 5.49,
+                "rating": 4.1
+              },
+              {
+                "id": 9,
+                "name": "Chamomile Tea",
+                "description": "Chamomile tea is an herbal tea made from the dried flowers of the chamomile plant. It has a mild, floral flavor with subtle hints of apple. Chamomile tea is often consumed for its calming and soothing properties, making it a popular choice for relaxation and promoting sleep.",
+                "price": 3.49,
+                "rating": 4.2
+              },
+              {
+                "id": 10,
+                "name": "Earl Grey Tea",
+                "description": "Earl Grey tea is a blend of black tea flavored with oil of bergamot, a citrus fruit. It has a distinctive floral aroma and flavor with a hint of citrus. Earl Grey is named after Charles Grey, the 2nd Earl Grey, who was British Prime Minister in the 1830s. It is a popular tea enjoyed both plain and with milk or lemon.",
+                "price": 4.49,
+                "rating": 4.5
+              },
+              {
+                "id": 11,
+                "name": "Darjeeling Tea",
+                "description": "Darjeeling tea is a type of black tea grown in the Darjeeling district of West Bengal, India. It is known for its delicate flavor and aroma, often described as muscatel, floral, or fruity. Darjeeling tea is highly prized and often considered the 'Champagne of Teas' due to its high quality and unique characteristics.",
+                "price": 6.99,
+                "rating": 4.7
+              }
+            ]
+          }
+        ]
+    }
+    }
+    }
