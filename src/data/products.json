@@ -1,8 +1,7 @@
 {
     "products": {
       "data": {
-        "items": [{
-            "products": [
+        "items": [
               {
                 "id": 1,
                 "name": "Green Tea",
@@ -81,8 +80,7 @@
                 "rating": 4.7
               }
             ]
-          }
-        ]
+          
     }
     }
     }

@@ -1,8 +1,22 @@
-// import ProductCard from "../components/ProductCard";
-// import image1 from "../assets/image1.jpg";
-// import products from "../data/products.json";
+import ProductCard from "../components /ProductCard";
+import tea from "../assets/tea.jpg";
+import products from "../data/products.json";
+
 const Home = () => {
-  return <div>Home Page</div>;
+  const productsArray = products.products.data.items;
+  return (
+    <>
+      {productsArray.map((product) => (
+        <ProductCard
+          image={tea}
+          name={product.name}
+          description={product.description}
+          price={product.price}
+          rating={product.rating}
+        />
+      ))}
+    </>
+  );
 };
 
 export default Home;

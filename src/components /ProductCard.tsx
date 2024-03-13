@@ -9,7 +9,7 @@ interface ProductCardProps {
   image: string;
   name: string;
   description: string;
-  price: string;
+  price: number;
   rating: number;
 }
 export default function ProductCard({
@@ -36,10 +36,10 @@ export default function ProductCard({
           {rating}
         </Typography>
       </CardContent>
-      {/* <CardActions>
+      <CardActions>
         <Button size="small">Share</Button>
         <Button size="small">Learn More</Button>
-      </CardActions> */}
+      </CardActions>
     </Card>
   );
 }
