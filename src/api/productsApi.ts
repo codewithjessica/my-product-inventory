@@ -25,4 +25,4 @@ export const createProduct = (productData: ProductType) =>
 // PUT / PATCH;
 
 // DELETE;
-export const deleteProduct = (id: string) => axios.delete(`${API_URL}/${id}`);
+export const deleteProduct = (id: string) => axios.delete(`${PRODUCT_ENDPOINT}/${id}`);
