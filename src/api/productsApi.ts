@@ -1,28 +1,25 @@
 import axios from "axios";
+import { ProductType } from "../types/products";
 
-// CRUD
+// http://localhost:8000/todos
+// https://product-backend-3v99.onrender.com/todos
+const API_URL = "http://localhost:8000/products";
 
-// GET;
-// GET all products
+// Fetch all products
+export const getAllProducts = () => axios.get(API_URL);
 
-const PRODUCT_ENDPOINT = import.meta.env.VITE_BASE_URL;
-
-export const getAllProducts = () => axios.get(PRODUCT_ENDPOINT);
-
-// POST;
 // Create a new product
-
-interface ProductType {
-  name: string;
-  email: string;
-  gitHubUsername: string;
-  blogUrl: string;
-}
-
 export const createProduct = (productData: ProductType) =>
-  axios.post(PRODUCT_ENDPOINT, productData);
+  axios.post(API_URL, productData);
 
-// PUT / PATCH;
+// Get a single product
+export const getProductById = (id: string) => axios.get(`${API_URL}/${id}`);
+export const getProductByCategory = (userInput: string) =>
+  axios.get(`${API_URL}/category/${userInput}`);
 
-// DELETE;
-export const deleteProduct = (id: string) => axios.delete(`${PRODUCT_ENDPOINT}/${id}`);
+// Update a product
+export const updateProduct = (id: string, productData: ProductType) =>
+  axios.patch(`${API_URL}/${id}`, productData);
+
+// Delete a product
+export const deleteProduct = (id: string) => axios.delete(`${API_URL}/${id}`);

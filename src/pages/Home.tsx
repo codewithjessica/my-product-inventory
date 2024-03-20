@@ -2,6 +2,8 @@ import ProductCard from "../components /ProductCard";
 import { useState, useEffect } from "react";
 import tea from "../assets/tea.jpg";
 // import products from "../data/products.json";
+import { ProductType } from "../types/products";
+import { getAllProducts } from "../api/productsApi";
 import "./Home.css";
 
 // const Home = () => {
@@ -44,10 +46,11 @@ const Home = () => {
         <ProductCard
           key={product._id}
           _id={product._id}
-          image={product.image}
-          title={product.title}
+          name={product.name}
           description={product.description}
           price={product.price}
+          rating={product.rating}
+          image={product.image}
         />
       ))}
     </>
