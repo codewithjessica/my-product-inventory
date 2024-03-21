@@ -44,7 +44,7 @@ function Navbar() {
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             <NavButton link="/" name="home" />
             <NavButton link="/AddProduct" name="Add Product" />
-            <NavButton link="/EditProduct" name="Edit Product" />
+            {/* <NavButton link="/EditProduct" name="Edit Product" /> */}
           </Box>
         </Toolbar>
       </Container>
