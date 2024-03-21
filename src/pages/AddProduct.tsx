@@ -6,6 +6,7 @@ import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
+import { brown } from "@mui/material/colors";
 
 function AddProduct() {
   const formik = useFormik({
@@ -25,7 +26,7 @@ function AddProduct() {
       description: Yup.string()
         .min(5, "Must be at least 5 characters")
         .max(500, "Must be at most 100 characters")
-        .required(),
+        .required("Required"),
       price: Yup.number().min(0, "Cannot not be a negative number").required(),
       rating: Yup.number()
         .min(0, "The rating must between 0 to 5")
@@ -62,6 +63,7 @@ function AddProduct() {
           component="h2"
           gutterBottom
           align="center"
+          color="brown"
           sx={{ marginBottom: "20px" }}
         >
           Add Product
@@ -111,7 +113,7 @@ function AddProduct() {
         <TextField
           id="rating"
           name="rating"
-          label="Rating"
+          label="Rating (out of 5)"
           variant="outlined"
           fullWidth
           onChange={formik.handleChange}
@@ -126,8 +128,8 @@ function AddProduct() {
           color="primary"
           type="submit"
           sx={{
-            backgroundColor: "#027a9c",
-            "&:hover": { backgroundColor: "#00566e" },
+            backgroundColor: "brown",
+            "&:hover": { backgroundColor: "#3C280D" },
           }}
         >
           Submit

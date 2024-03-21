@@ -28,17 +28,18 @@ const Home = () => {
       sx={{
         width: "100%",
         display: "flex",
-        justifyContent: "center",
+        justifyContent: "flex-start",
         alignItems: "center",
         flexDirection: "column",
-        mt: "70px",
+        mt: "40px",
       }}
     >
-      <Typography variant="h4" component="h2" gutterBottom>
-        Product List
+      <Typography variant="h4" component="h2" gutterBottom color="brown">
+        <strong>Product List</strong>
       </Typography>
       <Grid
         container
+        spacing={2}
         justifyContent="center"
         alignItems="top"
         maxWidth="80%"

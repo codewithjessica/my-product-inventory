@@ -24,7 +24,7 @@ function Navbar() {
               fontFamily: "monospace",
               fontWeight: 700,
               letterSpacing: ".3rem",
-              color: "inherit",
+              color: "lightyellow",
               textDecoration: "none",
             }}
           >
@@ -35,7 +35,7 @@ function Navbar() {
             <Button
               href="/"
               key="home"
-              sx={{ my: 2, colour: "white", display: "block" }}
+              sx={{ my: 2, display: "block" }}
             >
               home page
             </Button>
