@@ -9,7 +9,7 @@ import NavButton from "./NavButton";
 
 function Navbar() {
   return (
-    <AppBar position="static" sx={{ backgroundColor: '#352315' }}>
+    <AppBar position="static" sx={{ backgroundColor: "#352315" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           {/* <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} /> */}
@@ -28,15 +28,11 @@ function Navbar() {
               textDecoration: "none",
             }}
           >
-            Tea
+            🍵Tea🫖
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
-            <Button
-              href="/"
-              key="home"
-              sx={{ my: 2, display: "block" }}
-            >
+            <Button href="/" key="home" sx={{ my: 2, display: "block" }}>
               home page
             </Button>
           </Box>

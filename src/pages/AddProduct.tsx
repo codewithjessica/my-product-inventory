@@ -66,7 +66,7 @@ function AddProduct() {
           color="#352315"
           sx={{ marginBottom: "20px" }}
         >
-          Add Product
+          <strong>Add Product</strong>
         </Typography>
 
         <TextField
