@@ -2,10 +2,12 @@ import Card from "@mui/material/Card";
 // import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
-// import Button from "@mui/material/Button";
+import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
+import { Link } from "react-router-dom";
 
 interface ProductCardProps {
+  _id: string;
   image: string;
   name: string;
   description: string;
@@ -13,6 +15,7 @@ interface ProductCardProps {
   rating: number;
 }
 export default function ProductCard({
+  _id,
   image,
   name,
   description,
@@ -38,8 +41,10 @@ export default function ProductCard({
       </CardContent>
       {/* <CardActions>
         <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
       </CardActions> */}
+      <Link to={`/product/${_id}`}>
+        <Button size="small">Learn More</Button>
+      </Link>
     </Card>
   );
 }
