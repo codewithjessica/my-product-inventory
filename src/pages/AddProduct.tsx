@@ -128,7 +128,7 @@ function AddProduct() {
           color="primary"
           type="submit"
           sx={{
-            backgroundColor: "brown",
+            backgroundColor: "#795C34",
             "&:hover": { backgroundColor: "#352315" },
           }}
         >
