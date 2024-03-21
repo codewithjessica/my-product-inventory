@@ -34,7 +34,7 @@ const Home = () => {
         mt: "40px",
       }}
     >
-      <Typography variant="h4" component="h2" gutterBottom color="brown">
+      <Typography variant="h4" component="h2" gutterBottom color="#352315">
         <strong>Product List</strong>
       </Typography>
       <Grid

@@ -63,7 +63,7 @@ function AddProduct() {
           component="h2"
           gutterBottom
           align="center"
-          color="brown"
+          color="#352315"
           sx={{ marginBottom: "20px" }}
         >
           Add Product
@@ -129,7 +129,7 @@ function AddProduct() {
           type="submit"
           sx={{
             backgroundColor: "brown",
-            "&:hover": { backgroundColor: "#3C280D" },
+            "&:hover": { backgroundColor: "#352315" },
           }}
         >
           Submit
