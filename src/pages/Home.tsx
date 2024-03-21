@@ -4,6 +4,7 @@ import tea from "../assets/tea.jpg";
 // import products from "../data/products.json";
 import { ProductType } from "../types/products";
 import { getAllProducts } from "../api/productsApi";
+import { Box, Grid, Typography } from "@mui/material";
 import "./Home.css";
 
 const Home = () => {
@@ -24,19 +25,41 @@ const Home = () => {
   }, []);
 
   return (
-    <>
-      {products.map((product) => (
-        <ProductCard
-          key={product._id}
-          _id={product._id}
-          name={product.name}
-          description={product.description}
-          price={product.price}
-          rating={product.rating}
-          image={tea}
-        />
-      ))}
-    </>
+    <Box
+      sx={{
+        width: "100%",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        flexDirection: "column",
+        mt: "70px",
+      }}
+    >
+      <Typography variant="h4" component="h2" gutterBottom>
+        Product List
+      </Typography>
+      <Grid
+        container
+        justifyContent="center"
+        alignItems="top"
+        maxWidth="80%"
+        margin="auto"
+      >
+        {products.map((product) => (
+          <Grid item xs={12} sm={6} md={4} lg={3} key={product._id}>
+            <ProductCard
+              key={product._id}
+              _id={product._id}
+              name={product.name}
+              description={product.description}
+              price={product.price}
+              rating={product.rating}
+              image={tea}
+            />
+          </Grid>
+        ))}
+      </Grid>
+    </Box>
   );
 };
 
