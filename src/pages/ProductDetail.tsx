@@ -49,8 +49,8 @@ const ProductDetail = () => {
           <p>{product.description}</p>
           {/* <button onClick={() => setModalOpen(true)}>Update Product</button> */}
           <button onClick={handleDelete}>
-          {/* Delete Product */}
-          {isLoading ? <p>Deleting...</p> : <p>Delete Product</p>}
+            {/* Delete Product */}
+            {isLoading ? <p>Deleting...</p> : <p>Delete Product</p>}
           </button>
         </>
       ) : (
