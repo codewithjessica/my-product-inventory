@@ -9,7 +9,7 @@ const API_URL = "https://my-product-inventory-backend.onrender.com";
 export const getAllProducts = () => axios.get(API_URL);
 
 // Create a new product
-export const createProduct = (productData: ProductType) =>
+export const createProduct = (productData: Partial<ProductType>) =>
   axios.post(API_URL, productData);
 
 // Get a single product

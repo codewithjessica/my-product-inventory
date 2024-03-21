@@ -12,8 +12,8 @@ function AddProduct() {
     initialValues: {
       name: "",
       description: "",
-      price: "",
-      rating: "",
+      price: 0,
+      rating: 0,
     },
     validationSchema: Yup.object({
       name: Yup.string()
@@ -135,6 +135,6 @@ function AddProduct() {
       </Box>
     </Container>
   );
-};
+}
 
 export default AddProduct;
