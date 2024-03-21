@@ -3,7 +3,7 @@ import { ProductType } from "../types/products";
 
 // http://localhost:8000/todos
 // https://product-backend-3v99.onrender.com/todos
-const API_URL = "http://localhost:8000/products";
+const API_URL = "https://my-product-inventory-backend.onrender.com";
 
 // Fetch all products
 export const getAllProducts = () => axios.get(API_URL);
