@@ -43,7 +43,7 @@ export default function ProductCard({
         <Button size="small">Share</Button>
       </CardActions> */}
       <Link to={`/product/${_id}`}>
-        <Button size="small">Learn More</Button>
+        <Button size="small">Delete</Button>
       </Link>
     </Card>
   );

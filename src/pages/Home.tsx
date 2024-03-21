@@ -5,7 +5,6 @@ import tea from "../assets/tea.jpg";
 import { ProductType } from "../types/products";
 import { getAllProducts } from "../api/productsApi";
 import { Box, Grid, Typography } from "@mui/material";
-import "./Home.css";
 
 const Home = () => {
   const [products, setProducts] = useState<ProductType[]>([]);
