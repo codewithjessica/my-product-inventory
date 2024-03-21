@@ -1,10 +1,11 @@
-import { Form, Container, Button } from "react-bootstrap";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-
-// import "bootstrap/dist/css/bootstrap.min.css";
-import "./AddProduct.css";
-// import { createProduct } from "./api/productAPI";
+import { createProduct } from "../api/productsApi";
+import Container from "@mui/material/Container";
+import Box from "@mui/material/Box";
+import TextField from "@mui/material/TextField";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
 
 function AddProduct() {
   const formik = useFormik({
@@ -23,7 +24,7 @@ function AddProduct() {
         .required("Required"),
       description: Yup.string()
         .min(5, "Must be at least 5 characters")
-        .max(100, "Must be at most 100 characters")
+        .max(500, "Must be at most 100 characters")
         .required(),
       price: Yup.number().min(0, "Cannot not be a negative number").required(),
       rating: Yup.number()
@@ -31,104 +32,109 @@ function AddProduct() {
         .max(5, "The rating must between 0 to 5")
         .required(),
     }),
-    onSubmit: (values) => {
-      // Here, you handle what you want to do with the form data when the form is submitted.
-      // For instance, sending the data to a server.
-      console.log(values);
+
+    onSubmit: async (values, { resetForm }) => {
+      try {
+        const response = await createProduct(values);
+        console.log("Product added successfully", response.data);
+        resetForm({});
+      } catch (error) {
+        console.error("Failed to add product", error);
+      } finally {
+        resetForm({});
+      }
     },
-    // onSubmit: async (values, { resetForm }) => {
-    //   try {
-    //     const response = await createProduct(values);
-    //     console.log("Product added successfully", response.data);
-    //   } catch (err) {
-    //     console.error("Failed to add Product", err);
-    //   } finally {
-    //     resetForm({});
-    //   }
-    // },
   });
 
   return (
-    <Container fluid className="addproduct-form">
-      <Form method="post" action="#" onSubmit={formik.handleSubmit}>
-        <Form.Group>
-          <Form.Label>Product Name: </Form.Label>
-          <Form.Control
-            id="name"
-            name="name"
-            type="text"
-            placeholder="Enter product name"
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-            value={formik.values.name}
-          />
-          {formik.touched.name && formik.errors.name ? (
-            <Form.Text className="text-muted">{formik.errors.name}</Form.Text>
-          ) : null}
-        </Form.Group>
+    <Container maxWidth="sm">
+      <Box
+        component="form"
+        onSubmit={formik.handleSubmit}
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          marginTop: "30px",
+        }}
+      >
+        <Typography
+          variant="h4"
+          component="h2"
+          gutterBottom
+          align="center"
+          sx={{ marginBottom: "20px" }}
+        >
+          Add Product
+        </Typography>
 
-        <Form.Group>
-          <Form.Label>Description: </Form.Label>
-          <Form.Control
-            id="description"
-            name="description"
-            type="text"
-            placeholder="Enter the description"
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-            value={formik.values.description}
-          />
-          {formik.touched.description && formik.errors.description ? (
-            <Form.Text className="text-muted">
-              {formik.errors.description}
-            </Form.Text>
-          ) : null}
-        </Form.Group>
+        <TextField
+          id="name"
+          name="name"
+          label="Product Name"
+          variant="outlined"
+          fullWidth
+          onChange={formik.handleChange}
+          value={formik.values.name}
+          error={formik.touched.name && Boolean(formik.errors.name)}
+          helperText={formik.touched.name && formik.errors.name}
+          sx={{ marginBottom: "30px" }}
+        />
 
-        <Form.Group>
-          <Form.Label>Price: </Form.Label>
-          <Form.Control
-            id="price"
-            name="price"
-            type="text"
-            placeholder="Enter the price"
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-            value={formik.values.price}
-          />
-          {formik.touched.price && formik.errors.price ? (
-            <Form.Text className="text-muted">{formik.errors.price}</Form.Text>
-          ) : null}
-        </Form.Group>
+        <TextField
+          id="description"
+          name="description"
+          label="Product Description"
+          variant="outlined"
+          fullWidth
+          onChange={formik.handleChange}
+          value={formik.values.description}
+          error={
+            formik.touched.description && Boolean(formik.errors.description)
+          }
+          helperText={formik.touched.description && formik.errors.description}
+          sx={{ marginBottom: "30px" }}
+        />
 
-        <Form.Group>
-          <Form.Label>Rating: </Form.Label>
-          <Form.Control
-            id="Rating"
-            name="rating"
-            type="text"
-            placeholder="Enter the rating between 0 to 5"
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-            value={formik.values.rating}
-          />
-          {formik.touched.rating && formik.errors.rating ? (
-            <Form.Text className="text-muted">{formik.errors.rating}</Form.Text>
-          ) : null}
-        </Form.Group>
+        <TextField
+          id="price"
+          name="price"
+          label="Price"
+          variant="outlined"
+          fullWidth
+          onChange={formik.handleChange}
+          value={formik.values.price}
+          error={formik.touched.price && Boolean(formik.errors.price)}
+          helperText={formik.touched.price && formik.errors.price}
+          sx={{ marginBottom: "30px" }}
+        />
 
-        <Button variant="primary" type="submit">
+        <TextField
+          id="rating"
+          name="rating"
+          label="Rating"
+          variant="outlined"
+          fullWidth
+          onChange={formik.handleChange}
+          value={formik.values.rating}
+          error={formik.touched.rating && Boolean(formik.errors.rating)}
+          helperText={formik.touched.rating && formik.errors.rating}
+          sx={{ marginBottom: "30px" }}
+        />
+
+        <Button
+          variant="contained"
+          color="primary"
+          type="submit"
+          sx={{
+            backgroundColor: "#027a9c",
+            "&:hover": { backgroundColor: "#00566e" },
+          }}
+        >
           Submit
         </Button>
-      </Form>
+      </Box>
     </Container>
   );
-}
+};
 
 export default AddProduct;
-
-// const AddProduct = () => {
-//     return <div>AddProduct</div>;
-//   };
-
-//   export default AddProduct;

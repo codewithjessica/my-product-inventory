@@ -6,23 +6,6 @@ import { ProductType } from "../types/products";
 import { getAllProducts } from "../api/productsApi";
 import "./Home.css";
 
-// const Home = () => {
-//   const productsArray = products.products.data.items;
-//   return (
-//     <div className="productContainer">
-//       {productsArray.map((product) => (
-//         <ProductCard
-//           image={tea}
-//           name={product.name}
-//           description={product.description}
-//           price={product.price}
-//           rating={product.rating}
-//         />
-//       ))}
-//     </div>
-//   );
-// };
-
 const Home = () => {
   const [products, setProducts] = useState<ProductType[]>([]);
 
@@ -50,7 +33,7 @@ const Home = () => {
           description={product.description}
           price={product.price}
           rating={product.rating}
-          image={product.image}
+          image={tea}
         />
       ))}
     </>
